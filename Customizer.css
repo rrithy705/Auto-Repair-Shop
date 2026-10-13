@@ -1,0 +1,212 @@
+.page {
+    max-width: 1200px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+}
+
+.page-message {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.car-preview {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ---------- customizer form ---------- */
+
+.customizer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 20px;
+    align-items: start;
+}
+
+.preview-panel {
+    position: sticky;
+    top: 20px;
+}
+
+.price-tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.price-tag strong {
+    font-size: 2rem;
+}
+
+.base-price {
+    color: #a1a1aa;
+    font-size: 0.85rem;
+}
+
+.form-errors {
+    background: rgba(220, 38, 38, 0.2);
+    border: 1px solid #dc2626;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin: 10px 0;
+}
+
+.form-errors ul {
+    margin: 5px 0 0;
+}
+
+.form-errors li {
+    list-style: disc;
+    margin-left: 15px;
+}
+
+.form-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.convertible-toggle {
+    margin: 10px 0 20px;
+}
+
+.feature {
+    margin-bottom: 15px;
+}
+
+.feature legend {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.option-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 8px;
+}
+
+#root .option-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    text-align: left;
+    text-transform: none;
+    font-weight: 400;
+    background: rgba(255, 255, 255, 0.06);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    color: var(--color);
+}
+
+#root .option-btn:hover {
+    border-color: var(--color);
+}
+
+#root .option-btn.selected {
+    border-color: var(--primary);
+    background: rgba(115, 2, 12, 0.45);
+}
+
+#root .option-btn.unavailable {
+    opacity: 0.35;
+    cursor: not-allowed;
+    border-style: dashed;
+}
+
+.swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.option-name {
+    font-weight: 500;
+}
+
+.option-price {
+    font-size: 0.8rem;
+    color: #a1a1aa;
+}
+
+/* ---------- list + details ---------- */
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.car-card h3 {
+    margin-top: 10px;
+}
+
+.spec-list {
+    margin: 10px 0;
+    padding: 0;
+}
+
+.spec-list li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 0;
+    font-size: 0.9rem;
+}
+
+.spec-list li span:first-child {
+    color: #a1a1aa;
+}
+
+.car-card footer {
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#root .car-card footer [role=button],
+#root .car-card footer button {
+    margin: 0;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+}
+
+.spec-total {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+#root a.secondary-btn,
+#root a.secondary-btn:hover {
+    background: transparent;
+    border: 2px solid var(--color);
+}
+
+#root .danger-btn {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 20px;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .customizer, .details {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .preview-panel {
+        position: static;
+    }
+}

@@ -1,0 +1,12 @@
+.app {
+    background-color: #0b1320;
+    background-image:
+        repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.025) 0px, rgba(255, 255, 255, 0.025) 2px, transparent 2px, transparent 14px),
+        radial-gradient(ellipse at top, #1e3a5f 0%, #0f1c2e 45%, #070b12 100%);
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 50px;
+}
